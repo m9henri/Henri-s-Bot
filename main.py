@@ -108,4 +108,4 @@ async def on_message_delete(message):
 
         await log_channel.send(embed=embed)
 
-client.run('MTA3NzY4MDkxNjA5MDA3NzI0NA.G0J_Zb.OcWTE1qLiqYJAI2M1HHbA4PX223XNNAnBItrBQ')
+client.run('TOKEN')
