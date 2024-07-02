@@ -64,6 +64,7 @@ class help(commands.Cog):
         em.add_field(name="Meme", value="Fetch a meme: `.meme`", inline=False)
         em.add_field(name="Reddit", value="Get a Reddit post: `.reddit <subreddit>`", inline=False)
         em.add_field(name="Custom Command", value="Create custom command: `.createcmd <question> <answer>`\nUse custom command: `.cmd <custom cmd name>`", inline=False)
+        em.add_field(name="tske chance", value="Roll dice: `.dice <amount of dice> <>size of the dice`", inline=False)
         await ctx.send(embed=em)
 
 
