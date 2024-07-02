@@ -41,6 +41,7 @@ class help(commands.Cog):
         em.add_field(name="lock", value="lock current channel: `.lock`", inline=False)
         em.add_field(name="unlock", value="unlock current channel: `.unlock`", inline=False)
         em.add_field(name="Warn", value="Warn member: `.warn <member> <reason>`", inline=False)
+        em.add_field(name="Infractions", value="give number of users warns: `.infractions <member>`", inline=False)
         await ctx.send(embed=em)
 
 
