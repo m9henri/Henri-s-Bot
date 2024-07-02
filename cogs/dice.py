@@ -9,10 +9,8 @@ class dice(commands.Cog):
     async def ban(self, ctx, amount: int, size: int):
         while n <= amount:
             result = random.randint(1,size)
-            await ctx.send("the result is {result}")
+            await ctx.send("dice {n} landed a {result}")
             n = (n + 1)
-
-
 
 async def setup(bot):
     await bot.add_cog(dice(bot))
