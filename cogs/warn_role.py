@@ -15,7 +15,7 @@ client.remove_command('help')
 index = "."
 
 def get_guild_ref(guild_id):
-    return db.reference(f'/servers/{guild_id}')
+    return db.reference(f'servers/{guild_id}')
 
 class WarnRole(commands.Cog):
     def __init__(self, bot):
@@ -26,7 +26,7 @@ class WarnRole(commands.Cog):
         guild_id = ctx.guild.id
         guild_ref = get_guild_ref(guild_id)
 
-        warn_role_ref = guild_ref.child('/settings/warn_role')
+        warn_role_ref = guild_ref.child('settings/warn_role')
 
         if warn_role_ref.get():
             old_warn_role_id = warn_role_ref.get()
@@ -44,7 +44,7 @@ class WarnRole(commands.Cog):
 def save_config(guild_id, warn_role):
     if warn_role:
         guild_ref = get_guild_ref(guild_id)
-        ref_warn_role = guild_ref.child('/settings/warn_role')
+        ref_warn_role = guild_ref.child('settings/warn_role')
         ref_warn_role.set(warn_role.id)
 
 async def setup(bot):
