@@ -5,7 +5,7 @@ from firebase_admin import credentials
 from firebase_admin import db
 import os
 
-# firebase setup
+# variables
 cred = credentials.Certificate("key.json")
 firebase_admin.initialize_app(
     cred, {
@@ -13,7 +13,7 @@ firebase_admin.initialize_app(
         'https://henri-s-bot-default-rtdb.europe-west1.firebasedatabase.app/'
     })
 
-# Realtime database initialization
+# database initialization
 intents = discord.Intents.default()
 intents.message_content = True
 
@@ -32,13 +32,13 @@ def load_config(guild_id):
     if log_channel_id:
         log_channel = client.get_channel(int(log_channel_id))
 
-# load cogs
+# load commands
 async def load():
     for filename in os.listdir('./cogs'):
         if filename.endswith('.py'):
             await client.load_extension(f'cogs.{filename[:-3]}')
 
-# activity
+# runtime
 @client.event
 async def on_ready():
     print("Bot running....")
@@ -88,7 +88,7 @@ def save_message_to_db(message):
     except Exception as e:
         print(f"Error saving message to database: {e}")
 
-# Logging deleted messages
+# Lmessages logging
 @client.event
 async def on_message_delete(message):
     guild_id = message.guild.id
