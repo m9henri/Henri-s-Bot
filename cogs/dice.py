@@ -1,11 +1,9 @@
-import discord
+import discord, random
 from discord.ext import commands
-import random
 
 class dice(commands.Cog):
-    def __init__(self, bot):
-        self.bot = bot
-    @commands.command(name="dice", help="less than 10 random numbers at a command")
+    
+    @commands.command(name="dice", help="random number")
     async def dice(self, ctx, amount: int, size: int):
         if amount <= 10:
             while n <= amount:
@@ -16,7 +14,8 @@ class dice(commands.Cog):
         elif amount > 10:
             ctx.send("ran into error: too many dice")
 
-
+def __init__(self, bot):
+    self.bot = bot
 
 async def setup(bot):
     await bot.add_cog(dice(bot))
