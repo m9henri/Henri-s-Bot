@@ -35,6 +35,7 @@ class help(commands.Cog):
         em.add_field(name="Kick", value="Kick a member: `.kick <user> <reason>`", inline=False)
         em.add_field(name="Ban", value="Ban a member: `.ban <user> <reason>`", inline=False)
         em.add_field(name="Add Role", value="Add role to member: `.add_role <role> <member>`", inline=False)
+        em.add_field(name="Remove Role", value="Remove role from member: `.remove_role <role> <member>`", inline=False)
         em.add_field(name="Clear", value="Clear messages: `.clear <msgcount>`", inline=False)
         em.add_field(name="clearuser", value="Clear messages from user: `.clearuser <user>`", inline=False)
         em.add_field(name="lockdown", value="lock server: `.lockdown`", inline=False)
