@@ -13,8 +13,8 @@ class dice(commands.Cog):
                 result = random.randint(1,size)
                 await ctx.send("the result is " + str(result))
                 n += 1
-            elif amount > 10:
-                ctx.send("ran into error: too many dice")
+        elif amount > 10:
+            ctx.send("ran into error: too many dice")
 
 
 
