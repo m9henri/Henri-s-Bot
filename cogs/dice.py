@@ -7,10 +7,13 @@ class dice(commands.Cog):
         self.bot = bot
     @commands.command(name="dice", help="random number")
     async def ban(self, ctx, amount: int, size: int):
+        n = 1
         while n <= amount:
             result = random.randint(1,size)
-            await ctx.send("dice {n} landed a {result}")
+            await ctx.send("the result is " + str(result))
             n = (n + 1)
+
+
 
 async def setup(bot):
     await bot.add_cog(dice(bot))
