@@ -8,18 +8,17 @@ name = "viewerdiskretion"
 
 
 class about(commands.Cog):
-    def __init__(self, bot):
-        self.bot = bot
-
     @commands.command(name="about", help="Display information about the bot.")
     async def about(self, ctx):
         em = discord.Embed(title="About",
-                           description="This bot is the main bot of Henri and the Discord server Ofenpizza.",
+                           description="This bot is the main bot of Henri and the Server Ofenpizza.",
                            color=discord.Colour.yellow())
         em.set_author(name=name, icon_url=emico)
         em.add_field(name="Rewritten & optimized by wilson", value="© Viewerdiskretion 24")
         em.set_footer(text=f"{name} v{version}")
         await ctx.send(embed=em)
+    def __init__(self, bot):
+            self.bot = bot
 
 async def setup(bot):
     await bot.add_cog(about(bot))
