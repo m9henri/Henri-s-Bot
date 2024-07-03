@@ -6,7 +6,7 @@ class dice(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     @commands.command(name="dice", help="random number")
-    async def ban(self, ctx, amount: int, size: int):
+    async def dice(self, ctx, amount: int, size: int):
         n = 1
         while n <= amount:
             result = random.randint(1,size)
