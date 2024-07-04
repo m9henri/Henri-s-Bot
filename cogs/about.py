@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 # Variables
-version = "30.0"
+version = "3.0.0"
 emico = "https://cdn.discordapp.com/attachments/1203494029610717264/1203510979103694918/image.png?ex=65d15bf1&is=65bee6f1&hm=7fc9e85d80e10180aacaae477c2c6e11de5d7ee55a5a3dea2936fda8c738b607&"
 name = "viewerdiskretion"
 
