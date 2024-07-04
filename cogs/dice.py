@@ -6,12 +6,12 @@ class dice(commands.Cog):
     @commands.command(name="dice", help="random number")
     async def dice(self, ctx, amount: int, size: int):
         if amount <= 10:
-            while n <= amount:
-                n = 1
+            n = 1
+            while n <= amount:    
                 result = random.randint(1,size)
-                await ctx.send("the result is " + str(result))
+                await ctx.send(f"result of dice {n} is {result}")
                 n += 1
-        elif amount > 10:
+        elif not amount <= 10:
             await ctx.send("ran into error: too many dice, try 10 or less")
 
 def __init__(self, bot):

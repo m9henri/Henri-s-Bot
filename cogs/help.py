@@ -35,14 +35,12 @@ class help(commands.Cog):
         em.add_field(name="Kick", value="Kick a member: `.kick <user> <reason>`", inline=False)
         em.add_field(name="Ban", value="Ban a member: `.ban <user> <reason>`", inline=False)
         em.add_field(name="Add Role", value="Add role to member: `.add_role <role> <member>`", inline=False)
-        em.add_field(name="Remove Role", value="Remove role from member: `.remove_role <role> <member>`", inline=False)
         em.add_field(name="Clear", value="Clear messages: `.clear <msgcount>`", inline=False)
         em.add_field(name="clearuser", value="Clear messages from user: `.clearuser <user>`", inline=False)
         em.add_field(name="lockdown", value="lock server: `.lockdown`", inline=False)
         em.add_field(name="lock", value="lock current channel: `.lock`", inline=False)
         em.add_field(name="unlock", value="unlock current channel: `.unlock`", inline=False)
         em.add_field(name="Warn", value="Warn member: `.warn <member> <reason>`", inline=False)
-        em.add_field(name="Infractions", value="give number of users warns: `.infractions <member>`", inline=False)
         await ctx.send(embed=em)
 
 
@@ -63,10 +61,11 @@ class help(commands.Cog):
                             description="Help with fun commands",
                             color=discord.Color.blue())
         em.add_field(name="Ping", value="Ping the bot: `.ping`", inline=False)
+        em.add_field(name="Gay", value="Test how gay you are: `.gay`", inline=False)
         em.add_field(name="Meme", value="Fetch a meme: `.meme`", inline=False)
         em.add_field(name="Reddit", value="Get a Reddit post: `.reddit <subreddit>`", inline=False)
         em.add_field(name="Custom Command", value="Create custom command: `.createcmd <question> <answer>`\nUse custom command: `.cmd <custom cmd name>`", inline=False)
-        em.add_field(name="tske chance", value="Roll dice: `.dice <amount of dice> <>size of the dice`", inline=False)
+        em.add_field(name="Dice", value="Roll dice: `.dice <amount of dice> <size of the dice>`", inline=False)
         await ctx.send(embed=em)
 
 
@@ -77,6 +76,7 @@ class help(commands.Cog):
                             color=discord.Color.blue())
         em.add_field(name="About", value="Show bot info: `.about`", inline=False)
         em.add_field(name="Changelog", value="Show bot changelog: `.changelog`", inline=False)
+        em.add_field(name="Github", value="Post the bot's code: `.github`", inline=False)
         await ctx.send(embed=em)
 
 async def setup(bot):
