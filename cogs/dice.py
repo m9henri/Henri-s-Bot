@@ -12,7 +12,7 @@ class dice(commands.Cog):
                 await ctx.send("the result is " + str(result))
                 n += 1
         elif amount > 10:
-            ctx.send("ran into error: too many dice")
+            await ctx.send("ran into error: too many dice, try 10 or less")
 
 def __init__(self, bot):
     self.bot = bot

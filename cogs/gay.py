@@ -5,9 +5,9 @@ class gay(commands.Cog):
     @commands.command(name="gay", help="how gay r u")
     async def gay(self, ctx):
         gay: int = random.randint(1, 100)
-        ctx.send("you are {gay} percent gay")
+        await ctx.send(f"you are {gay} percent gay")
         if gay == 100:
-            ctx.sent("https://tenor.com/view/idubbbz-im-gay-filthy-frank-gif-6128368")
+            await ctx.send("https://tenor.com/view/idubbbz-im-gay-filthy-frank-gif-6128368")
 
 def __init__(self, bot):
     self.bot = bot
