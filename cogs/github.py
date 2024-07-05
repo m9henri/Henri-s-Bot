@@ -6,7 +6,7 @@ class github(commands.Cog):
         self.bot = bot
     @commands.command(name="github", help="posts the github link")
     async def github(self, ctx):
-        ctx.send("https://github.com/m9henri/Henri-s-Bot")
+        await ctx.send("https://github.com/m9henri/Henri-s-Bot")
 
 async def setup(bot):
     await bot.add_cog(github(bot))
