@@ -9,7 +9,7 @@ class dice(commands.Cog):
         n = 1
         while n <= amount:    
             num = random.randint(1, size)
-            send = (f"result of dice {n} is ,")
+            send = (f"result of dice {n} is/are,")
             result = send.append(f"{num}, ")
             n += 1
         ctx.send(send)
