@@ -8,9 +8,9 @@ class dice(commands.Cog):
     async def dice(self, ctx, amount: int, size: int):
         n = 1
         while n <= amount:    
-            result = random.randint(1, size)
+            num = random.randint(1, size)
             send = (f"result of dice {n} is ,")
-            result2 = send.append(f"{result}, ")
+            result = send.append(f"{num}, ")
             n += 1
         ctx.send(send)
 
