@@ -1,4 +1,5 @@
 import discord
+from discord import app_commands
 from discord.ext import commands
 import firebase_admin
 from firebase_admin import credentials
@@ -16,6 +17,7 @@ firebase_admin.initialize_app(
 # database initialization
 intents = discord.Intents.default()
 intents.message_content = True
+
 
 client = commands.Bot(command_prefix=".", intents=intents)
 client.remove_command('help')
@@ -45,6 +47,16 @@ async def on_ready():
     await load()
     await client.change_presence(status=discord.Status.do_not_disturb,
                                  activity=discord.Game(f"{index}help"))
+    try:
+        synced = await client.tree.sync()
+        print(f"Synced {len(synced)} command(s)")
+    except Exception as e:
+        print(e)
+
+# badge command (pls ignore this)
+@client.tree.command(name="badge")
+async def badge(interaction: discord.Interaction):
+    await interaction.response.send_message("get yo badge")
 
 # Error handling
 @client.event
