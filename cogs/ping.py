@@ -12,7 +12,7 @@ class Ping(commands.Cog):
     @commands.command(name="ping", help="Show ping information.")
     async def ping(self, ctx):
         embed = discord.Embed(title="Pong!", color=discord.Color.blue())
-        em.set_author(name=name, icon_url=emico)
+        embed.set_author(name=name, icon_url=emico)
 
         # set bot side latency
         latency = round(self.bot.latency * 1000, 2)
