@@ -9,10 +9,10 @@ class dice(commands.Cog):
         n = 1
         while n <= amount:    
             num = random.randint(1, size)
-            n += 1
-            str: number = ""
-            number += f"{num}, "
+            str: number = f" {num}, "
+            if n != 1:
+                number += f"{num}, "
             await ctx.send({f"results of the dice: {number}"})
-
+            n += 1
 async def setup(bot):
     await bot.add_cog(dice(bot))
