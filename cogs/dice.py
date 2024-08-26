@@ -12,6 +12,6 @@ class dice(commands.Cog):
             num = random.randint(1, size)
             number += f" {num}, "
             n += 1
-            await ctx.send{{number})
+            await ctx.send({number})
 async def setup(bot):
     await bot.add_cog(dice(bot))
