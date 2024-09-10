@@ -8,7 +8,7 @@ class dice(commands.Cog):
         # if amount <10:    
             while n <= amount:    
                 num = random.randint(1, size)
-                await ctx.send({f"results of the dice: {send}"})
+                await ctx.send(f"{num}")
                 n += 1
             break
         pass
